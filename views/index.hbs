@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <form action="/submit" method="post" role="form" enctype="application/x-www-form-urlencoded">
+            <form action="/submit" method="POST" role="form" enctype='multipart/form-data'>
                 <legend>Enter Registration Information Here</legend>
 
                 <div class="form-group">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Example file input</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input type="file" class="form-control-file" name="photo" id="exampleFormControlFile1">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
