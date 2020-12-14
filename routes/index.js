@@ -15,11 +15,15 @@ router.post('/submit',function(req,res){
     if(err)
       console.log('error')
     else
-      client.db('clientdata').collection('user').insertOne(req.body)
+      client.db('clientdata').collection('user').insertOne(req.body,req.files.name)
   })
   res.render('success',{ name:req.body.first_name});
+  var file = req.files.photo
+  var filename = file.name
   console.log(req.body)
   console.log(req.files.photo)
+  console.log(filename)
+  file.mv('imagesfolder'+filename)
 })
 
 module.exports = router;
