@@ -23,7 +23,7 @@ router.post('/submit',function(req,res){
   console.log(req.body)
   console.log(req.files.photo)
   console.log(filename)
-  file.mv('imagesfolder'+filename)
+  file.mv('./imagesfolder/'+filename)
 })
 
 module.exports = router;
